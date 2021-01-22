@@ -38,7 +38,7 @@ export default class Game extends BaseGame {
 
   getRandomLevel(): Level {
     let rNum = Math.random() * (10 - 1 + 1) + 1;
-    let i = Math.round(rNum * this.levels.length); //itt lehet hogy majd level kell!!
+    let i = Math.floor(rNum * this.levels.length); //itt lehet hogy majd level kell!!
     return this.levels[i];
   }
 
@@ -54,9 +54,7 @@ export default class Game extends BaseGame {
   }
 
   removeGrid(): void {
-    let vGrid = document.querySelectorAll('.vertical-grid');
-    let hGrid = document.querySelectorAll('.horizontal-grid');
-    const grids = [vGrid, hGrid]
+    let grids = document.querySelectorAll('.horizontal-grid .vertical-grid');
     grids.forEach(element => {
       Utils.removeNode(element)
     });

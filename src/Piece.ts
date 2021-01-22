@@ -53,9 +53,9 @@ interface IPiece {
  * Pótold a hiányzó tulajdonságokat és metódusokat az interfész alapján.
  */
 export default class Piece implements IPiece {
-  
-  
-  
+
+
+
   constructor({
     x,
     y,
