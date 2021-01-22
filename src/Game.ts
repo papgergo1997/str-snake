@@ -42,7 +42,16 @@ export default class Game extends BaseGame {
     return this.levels[i];
   }
 
+  mayIHaveGoldenApple(): boolean {
+    let chance = 5;
+    let pick = Math.random() * 100;
 
+    if (pick < chance) {
+      return true
+    } else {
+      return false;
+    }
+  }
 
   renderGarden() {
     const { clientHeight, clientWidth } = document.body;
