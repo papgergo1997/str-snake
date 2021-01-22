@@ -38,7 +38,7 @@ export default class Game extends BaseGame {
 
   getRandomLevel(): Level {
     let rNum = Math.random() * (10 - 1 + 1) + 1;
-    let i = Math.round(rNum * this.levels.length); //itt lehet hogy majd level kell!!
+    let i = Math.floor(rNum * this.levels.length); //itt lehet hogy majd level kell!!
     return this.levels[i];
   }
 
