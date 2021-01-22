@@ -54,9 +54,7 @@ export default class Game extends BaseGame {
   }
 
   removeGrid(): void {
-    let vGrid = document.querySelectorAll('.vertical-grid');
-    let hGrid = document.querySelectorAll('.horizontal-grid');
-    const grids = [vGrid, hGrid]
+    let grids = document.querySelectorAll('.horizontal-grid .vertical-grid');
     grids.forEach(element => {
       Utils.removeNode(element)
     });
