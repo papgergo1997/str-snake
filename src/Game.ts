@@ -53,6 +53,16 @@ export default class Game extends BaseGame {
     }
   }
 
+  removeGrid(): void {
+    let vGrid = document.querySelectorAll('.vertical-grid');
+    let hGrid = document.querySelectorAll('.horizontal-grid');
+    const grids = [vGrid, hGrid]
+    grids.forEach(element => {
+      Utils.removeNode(element)
+    });
+    this.gridVisible = false;
+  }
+
   renderGarden() {
     const { clientHeight, clientWidth } = document.body;
     const TOP = Math.max(60, Math.floor(clientHeight * 0.10));
