@@ -36,6 +36,14 @@ export default class Game extends BaseGame {
     localStorage.setItem('high-score', value.toString());
   }
 
+  getRandomLevel(): Level {
+    let rNum = Math.random() * (10 - 1 + 1) + 1;
+    let i = Math.round(rNum * this.levels.length); //itt lehet hogy majd level kell!!
+    return this.levels[i];
+  }
+
+
+
   renderGarden() {
     const { clientHeight, clientWidth } = document.body;
     const TOP = Math.max(60, Math.floor(clientHeight * 0.10));
