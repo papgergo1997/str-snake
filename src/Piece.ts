@@ -28,10 +28,7 @@ interface IPiece {
    * 2. Meghívja a this.applyClass metódust a változtatások érvényesítéséhez.
    */
   
-  setType(type: string): void {
-    this.type = type;
-    this.applyClass();
-  }
+  
 
   /**
    * Osztályokat állít be a this.el HTML elemre.
@@ -41,10 +38,7 @@ interface IPiece {
    */
   
 
-  applyClass(): void {
-    this.el.className = '';
-    this.el.classList.add('cell', this.type, this.direction);
-  }
+
 
 
   /**
@@ -73,7 +67,15 @@ export default class Piece implements IPiece {
   type: string;
   garden: HTMLDivElement;
   
-  
+  setType(type: string): void {
+    this.type = type;
+    this.applyClass();
+  }
+
+  applyClass(): void {
+    this.el.className = '';
+    this.el.classList.add('cell', this.type, this.direction);
+  } 
   
   constructor({
     x,
