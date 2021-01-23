@@ -49,7 +49,7 @@ interface IPiece {
    * Ha nem, akkor akkor tér vissza true -val, ha a this.x egyenlő a node.x -el 
    * és a this.y egyenlő a node.y -al.
    */
-  
+ 
 }
 
 /**
@@ -76,6 +76,17 @@ export default class Piece implements IPiece {
     this.el.className = '';
     this.el.classList.add('cell', this.type, this.direction);
   } 
+
+  isCollidingWith(node: Piece | null): boolean {
+    if (node === null) {
+      return false;
+    };
+    if ((this.x === node.x) && (this.y === node.y)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   
   constructor({
     x,
