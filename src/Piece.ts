@@ -21,7 +21,7 @@ interface IPiece {
   type: string;
   garden: HTMLDivElement;
 
-  /**
+  /**Próba push by János
    * Beállítja a típust.
    * @param type {string} - a beállítandó típus
    * 1. A this.type tulajdonságot beállítja a kapott type értékre.
