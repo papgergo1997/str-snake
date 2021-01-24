@@ -145,7 +145,7 @@ export default class Game extends BaseGame {
     this.showTopScore();
     this.splashToggle(true);
 
-    document.querySelector('#start').textContent = 'Neked Nyóóóóóc :)';
+    document.querySelector('#start').textContent = 'Neked Nyoooooc :)';
     document.querySelector('#start').classList.add('end');
   }
 
